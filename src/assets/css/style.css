@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-background: #ffffff;
+  --color-surface: #f3f4f4;
+  --color-border: #e4e4e7;
+  --color-text: #09090b;
+  --color-muted: #71717a;
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Dark mode override */
+.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #18181b;
+  --color-border: #27272a;
+  --color-text: #f4f4f5;
+  --color-muted: #a1a1aa;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .section {
+    @apply py-24;
+  }
+}

@@ -3,30 +3,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="/src/assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-gray-300">
-    <body class="bg-neutral-950 text-neutral-200 antialiased">
-      <div class="min-h-screen flex flex-col">
-        <!-- Header -->
-        <%- navbar %>
 
-        <!-- Main -->
-        <main class="flex-1">
-          <div class="max-w-5xl mx-auto px-6 py-20">
-            <h2 class="text-4xl font-semibold tracking-tight mb-6">
-              Build faster. Ship cleaner.
-            </h2>
-            <p class="text-neutral-400 max-w-xl leading-relaxed">
-              A minimal, neutral SaaS starter layout designed for clarity and
-              focus. No visual noise. Just structure.
-            </p>
-          </div>
-        </main>
+  <body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <div data-include="/src/components/navbar.html"></div>
 
-        <!-- Footer -->
-        <%- footer %>
-      </div>
-    </body>
+      <!-- Main -->
+      <main class="flex-1 section">
+        <!-- HERO -->
+        <div data-include="/src/components/hero.html" class="section"></div>
+        <a href="/blog.html">Read our blog</a>
+
+        <!-- FEATURES -->
+        <div
+          data-include="/src/components/features.html"
+          class="section bg-surface"
+        ></div>
+
+        <!-- TESTIMONIALS -->
+        <div
+          data-include="/src/components/testimonials.html"
+          class="section"
+        ></div>
+
+        <!-- PRICING -->
+        <div
+          data-include="/src/components/pricing.html"
+          class="section bg-surface"
+        ></div>
+
+        <!-- FAQ -->
+        <div data-include="/src/components/faq.html" class="section"></div>
+
+        <!-- CTA -->
+        <div data-include="/src/components/cta.html" class="section"></div>
+      </main>
+
+      <!-- Footer -->
+      <div data-include="/src/components/footer.html"></div>
+    </div>
+
+    <script src="src/assets/js/main.js"></script>
+    <script type="module" src="src/assets/js/include.js"></script>
   </body>
 </html>
